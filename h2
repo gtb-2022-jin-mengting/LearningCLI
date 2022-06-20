@@ -1,7 +1,8 @@
 #!/bin/bash
 #NAME=$1
 #NAME=$*
-echo -n "[$(date "+%Y-%m-%d %H:%M:%S")] "
+#echo -n "[$(date "+%Y-%m-%d %H:%M:%S")] "
+TS=$(date "+%Y-%m-%d %H:%M:%S")
 
 NAME=$@
-echo hello $NAME
+echo "[$TS] hello $NAME"
