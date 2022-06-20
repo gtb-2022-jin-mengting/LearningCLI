@@ -5,5 +5,12 @@
 
 TS=$(date "+%Y-%m-%d %H:%M:%S")
 ID=$1
-NAME=$(grep $1 name.list | cut -d' ' -f2)
+#NAME=$(grep $1 name.list | cut -d' ' -f2)
+NAME=$(grep $ID name.list 2>/dev/nul | cut -d' ' -f2)
+
+if [[ "" == "$NAME" ]]
+then
+    NAME="unknown"
+fi
+
 echo "[$TS] hello $NAME"
