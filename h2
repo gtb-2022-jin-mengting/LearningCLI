@@ -2,7 +2,8 @@
 #NAME=$1
 #NAME=$*
 #echo -n "[$(date "+%Y-%m-%d %H:%M:%S")] "
-TS=$(date "+%Y-%m-%d %H:%M:%S")
 
-NAME=$@
+TS=$(date "+%Y-%m-%d %H:%M:%S")
+ID=$1
+NAME=$(grep $1 name.list | cut -d' ' -f2)
 echo "[$TS] hello $NAME"
